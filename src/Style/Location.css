@@ -1,0 +1,97 @@
+/* /////////////////// */
+.house-location {
+    width: 250px !important;
+    height: 360px;
+    background-image: url("../Images/location1.jpg");
+    display: flex !important;
+    border-radius: 6px;
+    justify-content: center;
+    align-items: flex-end;
+    background-size: cover;
+    margin: 15px;
+
+}
+
+.location {
+    min-width: 179px;
+    height: 63px;
+    background-color: rgba(255, 253, 252, 0.9);
+    text-align: center;
+    border-radius: 6px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 40px;
+}
+
+.theLocation {
+    color: #1A1A1A;
+    font-size: 18px;
+    padding: 5px;
+}
+
+.no-of-prop {
+    color: #B39359;
+    font-size: 14px;
+}
+
+.houseHead {
+    text-align: left;
+    color:  #18425D;
+    /* font-family: "Averta Demo"; */
+    font-size: 34.313px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px; /* 116.576% */
+    letter-spacing: 0.4px;
+}
+
+.houseSubHead {
+    text-align: left;
+    color:  #848F9F;
+    /* font-family: Inter; */
+    font-size: 15.5px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 38px; /* 245.161% */
+    letter-spacing: 0.4px;
+}
+
+
+
+.slick-dots li button:before {
+    font-size: 20px;
+}
+
+
+
+.slick-next {
+    right: 34px;
+}
+.slick-prev {
+    left: 20px;
+    z-index: 2 !important;
+    /* border: 2px solid red; */
+}
+
+.slick-prev:before,
+.slick-next:before {
+    font-size: 50px;
+    line-height: 1;
+    opacity: 1;
+    color: white;
+}
+
+.slick-prev,
+.slick-next {
+    background-color: transparent!important;
+}
+
+
+.slick-prev {
+    border: none;
+}
+.slick-slider {
+    width: 97%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%)
+}
