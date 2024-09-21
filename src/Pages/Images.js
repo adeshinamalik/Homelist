@@ -34,6 +34,9 @@ import bathroomIcon2 from '../icons/bathroom-icon.svg'
 import serviceIcon from '../icons/serviced-icon.svg'
 import markIcon from '../icons/mark-icon.svg'
 import arrowDownIcon from '../icons/arrow-down-icon.svg'
+import myavatar1 from '../icons/myavatars1.svg'
+import myavatar2 from '../icons/myavatars2.png'
+import listback from '../Images/listbackground.jpg'
 
 
 
@@ -74,7 +77,10 @@ const myImages = {
     markIcon,
     bedroomIcon2,
     bathroomIcon2,
-    arrowDownIcon
+    arrowDownIcon,
+    myavatar1,
+    myavatar2,
+    listback
 
 }
 

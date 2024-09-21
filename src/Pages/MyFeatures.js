@@ -1,42 +1,50 @@
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import "../Style/slick.css"  
-import "../Style/slick-theme.css"  
+import React from 'react';
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/swiper-bundle.css';
+// import 'swiper/modules/navigation';
+// import 'swiper/modules/pagination';
+
+import '../Style/swiper1.css';
+
+// import required modules
+import { Navigation, Pagination, History } from 'swiper/modules';
 
 
+/////////////////////////////////////////////////
+import HouseList from './HouseList';
+/////////////////////////////////////////////////
 
-
-import React from "react";
-import Slider from "react-slick";
-
-export default function MyFeatures() {
-  var settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-  };
+export default function App() {
   return (
-    <Slider {...settings}>
-      <div>
-        <h3>1</h3>
+    <div className='popular-section'>
+      <div className='houseHead'>Featured Home</div>
+      <div className='houseSubHead'>Our offerings are tailored to meet your needs and suit your lifestyle.</div>
+      <div className='houses'>
+
+        <Swiper
+          spaceBetween={50}
+          slidesPerView={4}
+          navigation={true}
+          pagination={true}
+          modules={[Navigation, Pagination, History]}
+          className="mySwiper swiper1"
+        >
+          <SwiperSlide data-history="1">
+            <HouseList />
+          </SwiperSlide>
+          <SwiperSlide data-history="Slide 2"><HouseList /></SwiperSlide>
+          <SwiperSlide data-history="3"><HouseList /></SwiperSlide>
+          <SwiperSlide data-history="Slide 4"><HouseList /></SwiperSlide>
+          <SwiperSlide data-history="5"><HouseList /></SwiperSlide>
+          <SwiperSlide data-history="Slide 6"><HouseList /></SwiperSlide>
+          <SwiperSlide data-history="7"><HouseList /></SwiperSlide>
+          <SwiperSlide data-history="Slide 8"><HouseList /></SwiperSlide>
+          <SwiperSlide data-history="9"><HouseList /></SwiperSlide>
+        </Swiper>
       </div>
-      <div>
-        <h3>2</h3>
-      </div>
-      <div>
-        <h3>3</h3>
-      </div>
-      <div>
-        <h3>4</h3>
-      </div>
-      <div>
-        <h3>5</h3>
-      </div>
-      <div>
-        <h3>6</h3>
-      </div>
-    </Slider>
+    </div>
   );
 }

@@ -4,7 +4,6 @@
 
 .purpose-headings {
     color: rgba(24, 66, 93, 1);
-    /* font-family: Averta Demo; */
     font-size: 34.45px;
     font-weight: 400;
     line-height: 48px;
@@ -14,10 +13,14 @@
 }
 
 .purpose-sub-headings {
-    /* font-family: Inter; */
     font-size: 15.63px;
     font-weight: 400;
     line-height: 28px;
     text-align: left;
     color: rgba(132, 143, 159, 1);
+}
+
+.header3{
+    font-weight: 700!important;
+    font-size: 20.63px;
 }

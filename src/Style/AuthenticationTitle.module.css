@@ -1,0 +1,21 @@
+.title {
+    font-family:
+        Greycliff CF,
+        var(--mantine-font-family);
+    font-weight: 900;
+}
+
+.demo {
+    @mixin light {
+        color: red;
+    }
+
+    @mixin dark {
+        color: blue;
+    }
+}
+
+.theform{
+    width: 420px;
+    color: #C9C9C9;
+}

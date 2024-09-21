@@ -1,0 +1,20 @@
+.swiper2 {
+    margin-top: 0px !important;
+    height: 100% !important;
+    width: 100%!important;
+}
+.swiping2 {
+    width: 100%;
+}
+
+/*
+    .swiper2>.swiper-button-next:after,
+    .swiper2>.swiper-button-prev:after {
+        background-color: yellow !important;
+        font-size: 20px!important;
+        height: 30px;
+        width: 50px;
+        border-radius: 50%;
+        color: rgba(217, 217, 217, 1);
+        }
+        */

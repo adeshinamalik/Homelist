@@ -1,8 +1,8 @@
 import React from 'react'
 import myImages from './Images'
-import { Link } from 'react-router-dom'
 import '../Style/PostHouse.css'
 import { useState } from 'react'
+import Nav from './Nav'
 
 
 const PostHouse = () => {
@@ -130,23 +130,7 @@ const PostHouse = () => {
 
     return (
         <div className='posthouse'>
-            <nav>
-                <div className='buy-rent'>
-                    <div className="iconimg">icon</div>
-                    <div>Find an Agent</div>
-                    <div>Buy</div>
-                    <div>Rent</div>
-                </div>
-
-                <div className="links link-extends">
-                    <div class="post-black">Favourite homes</div>
-                    <Link to="/">
-                        <div className="user"><img src={myImages.profileavatar} alt="backgroung_imgcd" /><p>profile</p></div>
-                    </Link>
-                    <div></div>
-                </div>
-
-            </nav >
+          <Nav/>
             <div className='posthead'>
                 <div>Post House</div>
                 <div>clear</div>

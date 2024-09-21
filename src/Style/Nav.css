@@ -6,10 +6,10 @@
 nav {
     z-index: 3;
     width: 100%;
-    /* border: 1px solid red; */
-    font-family: "Averta Demo" !important;
     font-size: 16px;
     font-weight: 400;
+    padding-right: 125px;
+    height: 117px;
 
 }
 
@@ -21,7 +21,6 @@ nav ul {
     gap: 3rem;
     position: relative;
     background-color: yellowgreen;
-    /* border */
 }
 
 nav ul a {
@@ -60,7 +59,7 @@ nav ul a:hover {
 .has-submenu ul {
     position: absolute;
     top: 100%;
-    left: -2rem;
+    left: -5rem;
     background-color: #212224;
     border-radius: .5rem;
     padding: .5rem;

@@ -1,9 +1,11 @@
 * {
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    /* border: 1px solid red; */
 }
+.registerform{
+    position: fixed!important;
+    top: 0%;
 
+}
 body {
     margin: 0px;
     padding: 0px;
@@ -14,7 +16,6 @@ body {
 .register-page {
     width: 428px;
     height: 900PX;
-    background-image: url('../Images/hostelhome.svg');
     background-size: cover;
     display: flex;
     flex-direction: column;
@@ -186,7 +187,6 @@ body {
 
     .container {
         position: relative;
-        background-image: url('../Images/frames-for-your-heart-FqqiAvJejto-unsplash.svg');
         background-size: cover;
         width: 100%;
         height: 100vh;

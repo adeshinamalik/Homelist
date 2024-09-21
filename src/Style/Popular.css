@@ -3,15 +3,15 @@
 }
 
 .house-img {
-    width: 326px;
+    /* width: 326px; */
     height: 180px;
     border-radius: 12px 12px 0px 0px;
     overflow: hidden;
+    /* padding: 0px; */
+
 }
 
-.house-img>img {
-    width: 100%;
-}
+
 
 .popular-hostel {
     width: 342px !important;
@@ -23,6 +23,7 @@
     margin-top: 15px;
     padding-right: 2000px;
     padding: 8px;
+
 }
 
 .houseSubHead {
@@ -49,9 +50,14 @@
     justify-content: space-between;
     align-items: center;
     font-size: 22.88px;
-    font-weight: 700;
+    font-weight: 700 !important;
     color:
         #353F50;
+}
+
+.price {
+    font-weight: 700 !important;
+    font-size: 22.88px;
 }
 
 .ratings {
@@ -62,16 +68,18 @@
 
 .housing-info {
     color: #848F9F;
-    font-size: 17px;
+    font-size: 15.38px;
     font-weight: 400;
     padding: 7px 0px;
+    text-align: left;
 }
 
 .house-address {
     color: #848F9F;
-    font-size: 17px;
+    font-size: 15.38px;
     font-weight: 400;
     text-decoration: none;
+    text-align: left;
 }
 
 .img-rating {
@@ -86,9 +94,10 @@
 
 .popular-section {
     position: relative;
-    margin-top: 60px;   
+    margin-top: 60px;
 }
-.houses{
+
+.houses {
     position: relative;
     width: 1450px;
 }
@@ -132,7 +141,6 @@
 
 .purpose {
     color: #464646;
-    background-color: #FFFFFF;
     border-radius: 6px;
     padding: 5px 20px;
     font-weight: 600;
@@ -171,6 +179,7 @@
     text-align: center;
     justify-content: center;
     border-radius: 50%;
+    z-index: 11;
 }
 
 .saveicon>img {
@@ -204,6 +213,7 @@
     width: 56px;
     height: 22px;
     text-align: center;
+    z-index: 11;
 }
 
 .purpose-items {
@@ -227,7 +237,7 @@
 .slick-dots {
     position: absolute;
     bottom: -50px;
-    display: none!important;
+    display: none !important;
     width: 100%;
     padding: 0;
     margin: 0;
@@ -242,18 +252,16 @@
 
 /* ////////////////////////////////////// */
 .purpose-items {
+    display: flex;
+    flex-direction: column;
     width: 326.66px;
     height: 261.5px;
     padding: 27px 30px 27px 30px;
     background-color: white;
     border-radius: 8px;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
     align-items: flex-start;
-    justify-content: flex-end;
     text-align: left;
-    padding-top: 250px;
+    gap: 15px;
 }
 
 .purpose-items p {
@@ -264,12 +272,13 @@
 
 .purpose-feature {
     display: flex;
-    gap: 20px;
+    gap: 30px;
     flex-wrap: wrap;
     width: 1210px;
-    height: 823pxpx;
+    /* height: 823px; */
     padding: 0px 50px 0px 50px;
     margin-top: 50px;
+    margin-bottom: 150px;
 }
 
 .purpose-text {

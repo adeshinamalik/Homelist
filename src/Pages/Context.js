@@ -1,32 +1,70 @@
-import React, { createContext } from "react"
+import React, { createContext, useState, useEffect } from "react";
 
 const AuthContext = createContext();
 
-class AuthProvider extends React.Component {
-    state = {
-        isLoggedIn: true,
-    }
-    login = () => {
-        this.setState({ isLoggedIn: true })
-    }
-    logout = () => {
-        this.setState({ isLoggedIn: false })
-    }
-    render() {
-        const { children } = this.props;
-        const { isLoggedIn } = this.state;
-        const contextValue = {
-            isLoggedIn,
-            login: this.login,
-            logout: this.logout
-        }
-        return (
-            <div>
-                <AuthContext.Provider value={contextValue} >{children}</AuthContext.Provider>
-            </div>)
-    }
-}
+const AuthProvider = ({ children }) => {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [sessionCookieId, setSessionCookieId] = useState(null); // Rename sessionId to sessionCookieId
 
-const AuthConsumer = AuthContext.Consumer;
+  useEffect(() => {
+    const savedLoginStatus = localStorage.getItem('isLoggedIn');
+    if (savedLoginStatus === 'true') {
+      setIsLoggedIn(true);
 
-export { AuthProvider, AuthConsumer }
+      // Retrieve sessionCookieId from cookie if user is logged in
+      const sessionIdFromCookie = getSessionIdFromCookie();
+      setSessionCookieId(sessionIdFromCookie);
+    }
+  }, []);
+
+  // Monitor sessionCookieId for changes and log it
+  useEffect(() => {
+    if (sessionCookieId) {
+      console.log("Session Cookie ID:", sessionCookieId);
+    } else {
+      console.log("Session Cookie ID is not set");
+    }
+  }, [sessionCookieId]);  // Logs whenever sessionCookieId changes
+
+  const login = () => {
+    setIsLoggedIn(true);
+    localStorage.setItem('isLoggedIn', 'true');
+
+    // Set sessionCookieId upon login
+    const sessionIdFromCookie = getSessionIdFromCookie();
+    setSessionCookieId(sessionIdFromCookie);
+  };
+
+  const logout = () => {
+    setIsLoggedIn(false);
+    localStorage.setItem('isLoggedIn', 'false');
+    setSessionCookieId(null);
+  };
+
+const getSessionIdFromCookie = () => {
+  
+  const cookies = document.cookie.split("; ");
+  
+  // Replace 'sessionId' with the actual cookie name you want to retrieve
+  const sessionIdCookie = cookies.find(cookie => cookie.startsWith("_ga="));
+  
+  console.log(document.cookie );
+  return sessionIdCookie ? sessionIdCookie.split("=")[1] : null;
+};
+
+
+  const contextValue = {
+    isLoggedIn,
+    sessionCookieId,  // Expose sessionCookieId in the context
+    login,
+    logout,
+  };
+
+  return (
+    <AuthContext.Provider value={contextValue}>
+      {children}
+    </AuthContext.Provider>
+  );
+};
+
+export { AuthProvider, AuthContext };

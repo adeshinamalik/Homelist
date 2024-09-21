@@ -1,0 +1,30 @@
+.root {
+    position: relative;
+}
+
+.input {
+    height: rem(54px);
+    padding-top: rem(18px);
+}
+
+.label {
+    position: absolute;
+    pointer-events: none;
+    font-size: var(--mantine-font-size-xs);
+    padding-left: var(--mantine-spacing-sm);
+    padding-top: calc(var(--mantine-spacing-sm) / 2);
+    z-index: 1;
+}
+
+
+.listhouse {
+
+    /* width: 90%; */
+    padding: 50px;
+    position: relative;
+    left: 50%;
+    transform: translatex(-50%);
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}

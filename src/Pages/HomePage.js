@@ -1,24 +1,36 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 // import Location from './Location'
 import '../Style/HomePage.css'
-// import Popular from './Popular';
-// import Featured from './Feature';
 import Nav from './Nav';
 import myImages from './Images';
 import Purpose from './Purpose';
 import '../Style/Location.css'
 import Footer from './Footer';
+// import Featured from './Feature'
+import MyFeatures from './MyFeatures';
+import { AuthContext } from './Context';
+import { useContext } from 'react';
 
 
 const HomePage = () => {
+    const { isLoggedIn } = useContext(AuthContext);
+    useEffect(() => {
+        console.log(isLoggedIn);
+    }, [isLoggedIn])
+    // if (isLoggedIn) {
+    //     console.log("i have logged in");
+    // } else {
+    //     console.log("i have not logged in");
+    // }
+    // console.log("isLoggedIn:", isLoggedIn);
     return (
-        <div className="homePage">
+        <div className="homePage" style={{ fontFamily: 'Noto sans, sans-serif' }}>
             <Nav />
             <div className='firstchild'>
-                <div className="homePageText" style={{ fontFamily: 'Averta Demo, sans-serif' }}>
+                <div className="homePageText">
                     <div className="homePageText1">Find Your <span>Dream Home</span> <br /> With <span>HomeList</span></div>
                     <p>Discover the Perfect Property for You with HomeList: Your Gateway to Dream Living</p>
                 </div>
@@ -55,12 +67,15 @@ const HomePage = () => {
                 </div>
             </div>
 
-            {/* <Featured /> */}
+            <MyFeatures />
+
             <Purpose />
             <div className='house-bottom'>
-                <div className='bottom-heading'>Do you own a home?</div>
-                <p>Earn big in rental income from the best tenants in Nigeria.</p>
-                <span>Get Started</span>
+                <div>
+                    <div className='bottom-heading'>Do you own a home?</div>
+                    <p>Earn big in rental income from the best tenants in Nigeria.</p>
+                    <span>Get Started</span>
+                </div>
             </div>
             <Footer />
         </div>

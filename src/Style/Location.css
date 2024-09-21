@@ -18,7 +18,6 @@
     background-color: rgba(255, 253, 252, 0.9);
     text-align: center;
     border-radius: 6px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin-bottom: 40px;
 }
 
@@ -36,7 +35,6 @@
 .houseHead {
     text-align: left;
     color:  #18425D;
-    /* font-family: "Averta Demo"; */
     font-size: 34.313px;
     font-style: normal;
     font-weight: 400;
@@ -47,7 +45,6 @@
 .houseSubHead {
     text-align: left;
     color:  #848F9F;
-    /* font-family: Inter; */
     font-size: 15.5px;
     font-style: normal;
     font-weight: 400;

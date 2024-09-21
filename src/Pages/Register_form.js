@@ -4,6 +4,9 @@ import Image from './Images';
 import isEmail from 'validator/lib/isEmail';
 import axios from 'axios';
 import { Link, useNavigate } from 'react-router-dom';
+
+
+
 const RegisterForm = () => {
   const [newName, setNewName] = useState();
   const [newEmail, setNewEmail] = useState();
@@ -149,7 +152,7 @@ const RegisterForm = () => {
   }
 
   return (
-    <div className="container">
+    <div className="container registerform">
       <div className="register-page">
         <div className='theErrors'>
           {fieldErrors2.failedRules.length > 0 && (
